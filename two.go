@@ -17,9 +17,9 @@ func (this *MyJOb) Run() {
 
 func main() {
 	cron := cron.New()
-	cron.AddFunc("", func() {
-	})
-	cron.AddJob("", &MyJOb{})
+	//cron.AddFunc("", func() {
+	//})
+	//cron.AddJob("", &MyJOb{})
 	cron.AddFunc("@every 1s", func() {
 		if err := PlayOne("test.mp3"); err != nil {
 			log.Fatal(err)
